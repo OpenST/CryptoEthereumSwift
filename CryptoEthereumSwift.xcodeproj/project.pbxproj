@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		1AD1D65220B7F07F007AFF80 /* Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD1D63620B7E95A007AFF80 /* Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1AD1D65420B7F112007AFF80 /* EllipticCurveEncrypterSecp256k1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1D65320B7F112007AFF80 /* EllipticCurveEncrypterSecp256k1.swift */; };
 		1AD1D65620B7F252007AFF80 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD1D65520B7F252007AFF80 /* CryptoSwift.framework */; };
+		CF44A55D26264A2A00FFDD4C /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CF44A55C26264A2A00FFDD4C /* CryptoSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD1D65620B7F252007AFF80 /* CryptoSwift.framework in Frameworks */,
+				CF44A55D26264A2A00FFDD4C /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +182,9 @@
 			dependencies = (
 			);
 			name = CryptoEthereumSwift;
+			packageProductDependencies = (
+				CF44A55C26264A2A00FFDD4C /* CryptoSwift */,
+			);
 			productName = CryptoEthereumSwift;
 			productReference = 1AD1D61B20B7E822007AFF80 /* CryptoEthereumSwift.framework */;
 			productType = "com.apple.product-type.framework";
@@ -250,6 +255,9 @@
 				Base,
 			);
 			mainGroup = 1AD1D61120B7E822007AFF80;
+			packageReferences = (
+				CF44A55B26264A2A00FFDD4C /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
 			productRefGroup = 1AD1D61C20B7E822007AFF80 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -664,6 +672,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF44A55B26264A2A00FFDD4C /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF44A55C26264A2A00FFDD4C /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF44A55B26264A2A00FFDD4C /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1AD1D61220B7E822007AFF80 /* Project object */;
 }
